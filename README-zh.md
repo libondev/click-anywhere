@@ -9,10 +9,10 @@ npm install click-anywhere
 ```
 
 ## Usage
-这个库提供了 `vue2/3 指令` 和 `vue2.7/3 组件` 三种使用方式。
+这个库提供了 `vue2/3 指令` `vue2.7/3 组件` 和 `react 组件` 三种使用方式。
 
-### Component
-> 注意：目前组件只支持了 vue3 和 vue2.7。
+### Vue Component
+> 注意：目前组件只支持了 vue3 vue2.7 和 react，vue2.6 及以下版本暂不支持。
 
 ```html
 <template>
@@ -27,17 +27,23 @@ import ClickAnywhere from 'click-anywhere/dist/component'
 </script>
 ```
 
-#### Attributes
-| Attribute | Description | Type | Default |
-| --- | --- | --- | --- |
-| once | 该组件注册的事件只会执行一次 | `Boolean` | `false` |
-| ignores | 如果触发事件的 className 中的某一个类名出现在 `ignores` 中，那么本地事件则不会再执行 | `string[]` | `[]` |
-| disabled | 是否暂时禁用组件的点击事件(只有当组件传入的 `disabled` 参数变为 `false` 时事件才会正常触发) | `Boolean` | `false` |
+#### React Component
+```jsx
+import ClickAnywhere from 'click-anywhere/dist/react-component'
 
-#### Events
-| Event | Description | Parameters |
-| --- | --- | --- |
-| trigger | 当触发事件的目标元素符合过滤规则时则会触发此事件，如果设置了 `once` 属性，那么该事件只会执行一次 | `PointerEvent` |
+function App () {
+  return (
+    <ClickAnywhere
+      once
+      ignores={['ignore']}
+      disabled={false}
+      trigger={console.log}
+    >
+      Click anywhere
+    </ClickAnywhere>
+  )
+}
+```
 
 ### Directive
 
@@ -73,3 +79,15 @@ const directiveHandler = [
 ]
 </script>
 ```
+
+#### Attributes
+| Attribute | Description | Type | Default |
+| --- | --- | --- | --- |
+| once | 该组件注册的事件只会执行一次 | `Boolean` | `false` |
+| ignores | 如果触发事件的 className 中的某一个类名出现在 `ignores` 中，那么本地事件则不会再执行 | `string[]` | `[]` |
+| disabled | 是否暂时禁用组件的点击事件(只有当组件传入的 `disabled` 参数变为 `false` 时事件才会正常触发) | `Boolean` | `false` |
+
+#### Events
+| Event | Description | Parameters |
+| --- | --- | --- |
+| trigger | 当触发事件的目标元素符合过滤规则时则会触发此事件，如果设置了 `once` 属性，那么该事件只会执行一次 | `PointerEvent` |

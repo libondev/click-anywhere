@@ -9,10 +9,10 @@ npm install click-anywhere
 ```
 
 ## Usage
-The library also provides `vue2/3 directives` and `vue2.7/3 components` for selection.
+The library also provides `vue2/3 directives` `vue2.7/3 components` and `react component` for selection.
 
-### Component
-> TIP: Currently, only vue3 and vue2.7 are supported.
+### Vue Component
+> TIP: Currently, only vue3 vue2.7 and react are supported. vue2.6 and below are not supported.
 
 ```html
 <template>
@@ -27,17 +27,23 @@ import ClickAnywhere from 'click-anywhere/dist/component'
 </script>
 ```
 
-#### Attributes
-| Attribute | Description | Type | Default |
-| --- | --- | --- | --- |
-| once | The event registered by this component is executed only once | `Boolean` | `false` |
-| ignores | Element whitelist, the event registered by this component will not be triggered when the event is triggered on the element in the whitelist | `string[]` | `[]` |
-| disabled | Whether to disable the event registered by this component(Events are not executed until disabled becomes false) | `Boolean` | `false` |
+#### React Component
+```jsx
+import ClickAnywhere from 'click-anywhere/dist/react-component'
 
-#### Events
-| Event | Description | Parameters |
-| --- | --- | --- |
-| trigger | Triggered when the event is triggered | `PointerEvent` | `MouseEvent` |
+function App () {
+  return (
+    <ClickAnywhere
+      once
+      ignores={['ignore']}
+      disabled={false}
+      trigger={console.log}
+    >
+      Click anywhere
+    </ClickAnywhere>
+  )
+}
+```
 
 ### Directive
 
@@ -77,3 +83,15 @@ const directiveHandler = [
 ]
 </script>
 ```
+
+#### Attributes
+| Attribute | Description | Type | Default |
+| --- | --- | --- | --- |
+| once | The event registered by this component is executed only once | `Boolean` | `false` |
+| ignores | Element whitelist, the event registered by this component will not be triggered when the event is triggered on the element in the whitelist | `string[]` | `[]` |
+| disabled | Whether to disable the event registered by this component(Events are not executed until disabled becomes false) | `Boolean` | `false` |
+
+#### Events
+| Event | Description | Parameters |
+| --- | --- | --- |
+| trigger | Triggered when the event is triggered | `PointerEvent` | `MouseEvent` |
