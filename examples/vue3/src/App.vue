@@ -2,11 +2,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
-// import ClickAnywhere from 'click-anywhere/dist/vue'
-// import vClickAnywhere from '../../../src/directive'
-import ClickAnywhere from '../../../src/vue'
-
-// import { setGlobalIgnores } from 'click-anywhere'
+import ClickAnywhere from 'click-anywhere/dist/vue'
+import vClickAnywhere from 'click-anywhere/dist/directive'
 
 function onEventTrigger() {
   console.log('onEventTrigger')

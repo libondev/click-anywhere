@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <ClickAnywhere ignores={ ['card'] } onTrigger={onTrigger}>
+        <ClickAnywhere once ignores={ ['card'] } onTrigger={onTrigger}>
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </ClickAnywhere>
       </div>
