@@ -43,16 +43,13 @@ removed(el)
 </template>
 
 <script setup>
-import ClickAnywhere from 'click-anywhere'
-
-// or only component are introduced separately
-import ClickAnywhere from 'click-anywhere/dist/component'
+import ClickAnywhere from 'click-anywhere/dist/vue'
 </script>
 ```
 
 #### React Component
 ```jsx
-import ClickAnywhere from 'click-anywhere/dist/react-component'
+import ClickAnywhere from 'click-anywhere/dist/react'
 
 function App () {
   return (
@@ -84,9 +81,6 @@ The directive are common to vue2/vue3.
 </template>
 
 <script setup>
-import { vClickAnywhere } from 'click-anywhere'
-
-// or only directive are introduced separately
 import vClickAnywhere from 'click-anywhere/dist/directive'
 
 function clickAnywhere () {

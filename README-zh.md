@@ -44,16 +44,13 @@ removed(el)
 </template>
 
 <script setup>
-import ClickAnywhere from 'click-anywhere'
-
-// 或者 只单独引入组件
-import ClickAnywhere from 'click-anywhere/dist/component'
+import ClickAnywhere from 'click-anywhere/dist/vue'
 </script>
 ```
 
 #### React Component
 ```jsx
-import ClickAnywhere from 'click-anywhere/dist/react-component'
+import ClickAnywhere from 'click-anywhere/dist/react'
 
 function App () {
   return (
@@ -84,8 +81,6 @@ function App () {
 </template>
 
 <script setup>
-import { vClickAnywhere } from 'click-anywhere'
-// 或者只单独引入指令
 import vClickAnywhere from 'click-anywhere/dist/directive'
 
 function clickAnywhere () {
