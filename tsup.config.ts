@@ -4,7 +4,7 @@ export const tsup: Options = {
   dts: true,
   clean: true,
   minify: true,
-  splitting: true,
+  // splitting: true,
   format: ['esm', 'cjs'],
   external: ['vue', 'react'],
   entry: [

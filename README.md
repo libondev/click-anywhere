@@ -11,6 +11,29 @@ npm install click-anywhere
 ## Usage
 The library also provides `vue2/3 directives` `vue2.7/3 components` and `react component` for selection.
 
+### VanillaJS/Native JS
+
+```html
+<div id="app">This is app</div>
+
+<div class="ignore">This is ignore area</div>
+
+<script type="module">
+import { createHandler, removed } from 'click-anywhere'
+
+const el = document.getElementById('app')
+
+createHandler(console.log, {
+  once: true,
+  ignores: ['ignore'],
+  disabled: false
+})
+
+// remove handler
+removed(el)
+</script>
+```
+
 ### Vue Component
 > TIP: Currently, only vue3 vue2.7 and react are supported. vue2.6 and below are not supported.
 

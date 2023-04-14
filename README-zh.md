@@ -11,6 +11,30 @@ npm install click-anywhere
 ## Usage
 这个库提供了 `vue2/3 指令` `vue2.7/3 组件` 和 `react 组件` 三种使用方式。
 
+
+### VanillaJS/Native JS(原生JS)
+
+```html
+<div id="app">This is app</div>
+
+<div class="ignore">This is ignore area</div>
+
+<script type="module">
+import { createHandler, removed } from 'click-anywhere'
+
+const el = document.getElementById('app')
+
+createHandler(console.log, {
+  once: true,
+  ignores: ['ignore'],
+  disabled: false
+})
+
+// 在不需要的时候移除事件
+removed(el)
+</script>
+```
+
 ### Vue Component
 > 注意：目前组件只支持了 vue3 vue2.7 和 react，vue2.6 及以下版本暂不支持。
 
