@@ -5,16 +5,19 @@
   "description": "ClickOutside directive/component for Vue",
   "keywords": [
     "vue",
+    "react",
     "native",
     "vanilla",
     "directive",
     "component",
     "click-outside",
     "click-anywhere",
+    "v-click-outside",
     "v-click-anywhere"
   ],
   "files": [
-    "dist/*"
+    "dist/*",
+    "logo.svg"
   ],
   "sideEffect": false,
   "main": "./dist/index.js",

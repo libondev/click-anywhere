@@ -1,5 +1,7 @@
 # click-anywhere
 
+![logo](./logo.svg)
+
 [中文](./README-zh.md)
 
 ## Install

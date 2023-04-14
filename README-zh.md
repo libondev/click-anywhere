@@ -1,5 +1,7 @@
 # click-anywhere
 
+![logo](./logo.svg)
+
 [EN](./README.md)
 
 ## 安装
