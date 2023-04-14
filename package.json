@@ -1,0 +1,92 @@
+{
+  "name": "click-anywhere",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "ClickOutside directive/component for Vue",
+  "keywords": [
+    "vue",
+    "native",
+    "vanilla",
+    "directive",
+    "component",
+    "click-outside",
+    "click-anywhere",
+    "v-click-anywhere"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "sideEffect": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    },
+    "./vue": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    },
+    "./directive": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch src",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && npm publish",
+    "example": "npm -C examples/vue3 run dev",
+    "fix": "eslint src/** --ext .ts --fix"
+  },
+  "author": "banlify <banlify@163.com>",
+  "bugs": "https://github.com/banlify/click-anywhere/issues",
+  "homepage": "https://github.com/banlify/click-anywhere#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banlify/click-anywhere.git"
+  },
+  "volta": {
+    "node": "16.18.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "vue": "^3.2.0||^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.38.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "react": "^18.2.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "vue": "^3.2.47"
+  }
+}
