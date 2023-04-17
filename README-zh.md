@@ -1,10 +1,18 @@
 # click-anywhere
 
+<div style="text-align: center">
+
 ![logo](./logo.svg)
+</div>
 
-[EN](./README.md)
+<div style="text-align:center">
 
-## 安装
+[EN](./README.md) |
+[中文](./README-zh.md)
+
+</div>
+
+## Install
 
 ```bash
 npm install click-anywhere

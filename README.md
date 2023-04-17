@@ -1,8 +1,16 @@
 # click-anywhere
 
-![logo](./logo.svg)
+<div style="text-align: center">
 
+![logo](./logo.svg)
+</div>
+
+<div style="text-align:center">
+
+[EN](./README.md) |
 [中文](./README-zh.md)
+
+</div>
 
 ## Install
 
