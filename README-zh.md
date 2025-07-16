@@ -12,6 +12,8 @@
 
 </div>
 
+适用于 Vue2、3 / React / Vanilla JS 的 outside-click
+
 ## Install
 
 ```bash
