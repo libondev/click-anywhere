@@ -12,6 +12,8 @@
 
 </div>
 
+Outside-click library for Vue2, 3 / React / Vanilla JS
+
 ## Install
 
 ```bash
